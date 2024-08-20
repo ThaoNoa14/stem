@@ -1,0 +1,16 @@
+# log
+logging:
+    level:
+        root: INFO
+        edu.uneti.stem: INFO
+        org.springframework: INFO
+    path: logs
+    max-history: 3
+    max-file-size: 100MB
+
+# database
+spring:
+    r2dbc:
+        url: r2dbc:postgresql://localhost:5432/stem_db_staging
+        username: postgres
+        password: postgres
