@@ -1,6 +1,8 @@
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS roles CASCADE;
 DROP TABLE IF EXISTS users_roles CASCADE;
+DROP TABLE IF EXISTS roles_privileges CASCADE;
+DROP TABLE IF EXISTS privileges CASCADE;
 
 CREATE TABLE users  (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid (),
@@ -9,7 +11,7 @@ CREATE TABLE users  (
     last_name VARCHAR(255) NOT NULL,
     first_name VARCHAR(255) NOT NULL,
     birthday DATE NOT NULL,
-    gender VARCHAR(20) NOT NULL,
+    gender VARCHAR(20),
     password VARCHAR(255) NOT NULL
 );
 
